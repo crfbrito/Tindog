@@ -1,0 +1,5 @@
+USE mysql;
+DROP USER IF EXISTS 'tindoguser'@'localhost';
+CREATE USER 'tindoguser'@'localhost' IDENTIFIED BY 'tindog123';
+GRANT ALL PRIVILEGES ON tindog.* TO 'tindoguser'@'localhost';
+FLUSH PRIVILEGES;
