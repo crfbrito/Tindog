@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Context>
+<Context>
+
+	<!-- Specify a JDBC datasource -->
+	<Resource name="jdbc/tindog" auth="Container"
+		type="javax.sql.DataSource" username="tindoguser" password="tindog123"
+		driverClassName="com.mysql.jdbc.Driver"
+		url="jdbc:mysql://localhost/tindog?SSL=false" maxActive="8"
+		maxIdle="4" />
+</Context>
