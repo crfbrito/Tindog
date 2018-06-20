@@ -17,7 +17,7 @@ public class UserEM extends EntityManager {
 		return instance;
 	}
 
-	protected UserEM() {
+	public UserEM() {
 		super();
 	}
 

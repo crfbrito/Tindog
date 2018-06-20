@@ -1,6 +1,5 @@
 package com.carlos.modelos;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +17,6 @@ public class Usuario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Basic(optional = false)
 	@Column(name = "uid")
 	private Integer uid;
 	@Column(name = "image")
@@ -27,16 +25,12 @@ public class Usuario {
 	private String nombre;
 	@Column(name = "secondName")
 	private String apellido;
-	@Basic(optional = false)
 	@Column(name = "email")
 	private String correo;
-	@Basic(optional = false)
 	@Column(name = "password")
 	private String contrasena;
-	@Basic(optional = false)
 	@Column(name = "age")
 	private int edad;
-	@Basic(optional = false)
 	@Column(name = "interests")
 	private String intereses;
 	@Column(name = "gender")
@@ -48,9 +42,9 @@ public class Usuario {
 
 	}
 
-	public Usuario(String imagen, String nombre, String apellido, String correo, String contrasena,
+	public Usuario(Integer uid,String imagen, String nombre, String apellido, String correo, String contrasena,
 			int edad, String intereses, String sexo, String sobreMi) {
-		super();
+		
 		this.uid = uid;
 		this.imagen = imagen;
 		this.nombre = nombre;
@@ -62,7 +56,21 @@ public class Usuario {
 		this.sexo = sexo;
 		this.sobreMi = sobreMi;
 	}
-
+	
+	public Usuario(String imagen, String nombre, String apellido, String correo, String contrasena,
+			int edad, String intereses, String sexo, String sobreMi) {
+		
+		this.imagen = imagen;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.correo = correo;
+		this.contrasena = contrasena;
+		this.edad = edad;
+		this.intereses = intereses;
+		this.sexo = sexo;
+		this.sobreMi = sobreMi;
+	}
+	
 	public Integer getUid() {
 		return uid;
 	}

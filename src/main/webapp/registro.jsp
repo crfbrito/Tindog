@@ -32,7 +32,7 @@
 					</div>
 					<div class="form-group">
 						<label for="exampleFormControlFile1">Seleccione su imagen
-							de perfil:</label> <input type="file" class="form-control-file"
+							de perfil:</label> <input type="text" class="form-control-file"
 							id="exampleFormControlFile1" name="imagen" value="${user.image}"
 							required>
 					</div>
