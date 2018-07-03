@@ -1,0 +1,26 @@
+Comandos Curl
+
+--ACCEDER LA ZONA PRIVADA--
+
+GET TOKEN AND SAVE AS TXT:
+curl -H "Content-Type: application/json" -H "email: p@p.au" -H "password: 123" -v -X GET  http://localhost:8080/TindogREST/api/authenticate -v > tokenTindog.txt
+
+USE TOKEN:
+curl -H "Content-Type: application/json" -H "token: ... " -v -X GET  http://localhost:8080/TindogREST/api/users
+
+GET JSON LIST OF USERS:
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/TindogREST/api/users
+
+POST NEW USER:
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X POST -d '{"name":"PerroCurl","description":"Hola soy guapa!","password":"123","connections":null,"preferredAgeMax":"20","preferredAgeMin":"1","preferredGender":"masculino","preferredDistance":"30km","tindogId":3,"email":"teste@teste.au","matchId":2,"age":1,"pictures":null,"locationId":4,"gender":"feminino","reportedUser":null,"interests":"Hola quiero un novio!"}' http://localhost:8080/TindogREST/api/users
+
+GET JSON LIST OF USER BY ID:
+
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/TindogREST/api/users/1
+
+DELETE USER BY ID:
+
+curl -X DELETE "http://localhost:8080/TindogREST/api/users/1" -H "accept: application/json"
+
+
+
